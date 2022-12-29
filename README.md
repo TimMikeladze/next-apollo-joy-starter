@@ -47,7 +47,7 @@ Remaining simple at its core, this project is packed with useful tools that enha
 - 📖 [Storybook](https://storybook.js.org/) - Build UI components and pages in isolation. It streamlines UI development, testing, and documentation.
 - 🧪 [Jest](https://jestjs.io/) - A testing framework for JavaScript. Preconfigured to work with TypeScript and JSX.
 - 🐙 [Run tests via Github Actions](https://docs.github.com/en/actions) - CI/CD workflows for your package. Run tests on every commit plus integrate with Github Releases to automate publishing package to NPM and Storybook to Github Pages.
-- 📊 [Bundle analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) - Visualize the size of Next.js output files with an interactive zoomable treemap.
+- 📊 [Bundle analyzer](https://github.com/josselinbuils/next-bundle-analyzer) - Visualize the size of Next.js build output files with an interactive zoomable treemap.
 
 ##### 🧑‍🎨 Lint and format
 

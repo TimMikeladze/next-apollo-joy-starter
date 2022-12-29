@@ -38,6 +38,7 @@ const AppPage = (props: PropsWithChildren) => {
       <Sheet
         sx={{
           minHeight: `100vh`,
+          overflowX: `hidden`,
         }}
       >
         <AppToaster />
