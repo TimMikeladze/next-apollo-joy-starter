@@ -1,7 +1,6 @@
 import { useColorScheme } from '@mui/joy/styles';
-import Button from '@mui/joy/Button';
 import { useEffect, useState } from 'react';
-import { IconButton, IconButtonProps } from '@mui/joy';
+import { IconButton, Button, IconButtonProps } from '@mui/joy';
 import { DarkModeTwoTone, LightModeTwoTone } from '@mui/icons-material';
 
 const ThemeModeToggle = (props: IconButtonProps) => {
@@ -14,7 +13,7 @@ const ThemeModeToggle = (props: IconButtonProps) => {
 
   if (!mounted) {
     // to avoid layout shift, render a placeholder button
-    return <Button variant="outlined" color="neutral" />;
+    return <Button variant="plain" />;
   }
 
   return (
