@@ -13,7 +13,9 @@ const ThemeModeToggle = (props: IconButtonProps) => {
 
   if (!mounted) {
     // to avoid layout shift, render a placeholder button
-    return <Button variant="plain" />;
+    return (
+      <Button variant="plain" sx={(theme) => ({ width: theme.spacing(60) })} />
+    );
   }
 
   return (
