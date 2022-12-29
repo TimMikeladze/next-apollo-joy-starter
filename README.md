@@ -15,7 +15,7 @@ To get started clone the repo. Using `npx degit` is a great way to get this done
 ```console
 npx degit TimMikeladze/next-apollo-joy-starter my-app
 
-cd my-app
+cd my-app && git init
 
 yarn && yarn dev
 ```
