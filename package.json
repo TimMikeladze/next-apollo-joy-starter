@@ -16,6 +16,7 @@
     "type-check": "tsc --noEmit",
     "test": "jest --forceExit --passWithNoTests",
     "test:ci": "yarn test",
+    "test:watch": "jest --watch",
     "lint:fix": "yarn lint --fix; yarn format",
     "lint": "eslint --ignore-path .eslintignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .eslintignore \"src/**/*.+(ts|js|tsx)\" --write",
