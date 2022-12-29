@@ -4,7 +4,7 @@ Spend more time __building__ instead of _configuring_ your next project.
 
 ## 🚪 Intro
 
-This is a slightly opinionated starter kit for developing [Next.js](https://nextjs.org/) apps. It uses the [Joy UI](https://mui.com/joy-ui/getting-started/overview/) library from [MUI](https://mui.com/) along with the [Apollo](https://www.apollographql.com/) stack. All [GraphQL](https://graphql.org/) are operations are fully typed with [GraphQL Codegen](https://the-guild.dev/graphql/codegen) and [Zeus](https://github.com/graphql-editor/graphql-zeus). The starter kit also includes a fully functional [authentication system](https://next-auth.js.org/), [localization](https://www.i18next.com/), [PWA](https://github.com/shadowwalker/next-pwa) and plenty of other goodies for a great developer experience right out of the box.
+This is a slightly opinionated starter kit for developing [Next.js](https://nextjs.org/) apps. It uses the [Joy UI](https://mui.com/joy-ui/getting-started/overview/) library from [MUI](https://mui.com/) along with the [Apollo](https://www.apollographql.com/) stack. All [GraphQL](https://graphql.org/) are operations are fully typed with [GraphQL Codegen](https://the-guild.dev/graphql/codegen) and [Zeus](https://github.com/graphql-editor/graphql-zeus). The starter kit also includes a fully functional [authentication](https://next-auth.js.org/) system, [localization](https://www.i18next.com/), and outputs a [progressive web app](https://github.com/shadowwalker/next-pwa), plus plenty of other goodies for a great developer experience right out of the box.
 
 > 👋 Hello there! Follow me [@linesofcodedev](https://twitter.com/linesofcodedev) or visit [linesofcode.dev](https://linesofcode.dev) for more cool projects like this one.
 
@@ -31,14 +31,13 @@ Remaining simple at its core, this project is packed with useful tools that enha
 
 - 🔒 [Next Auth](https://next-auth.js.org/) - A complete open source authentication solution for Next.js applications. It is designed from the ground up to support Next.js and Serverless.
 - 🚀 [Apollo client and server](https://www.apollographql.com/) - Apollo is a great way to build your GraphQL stack. It comes with a great developer experience and a lot of features out of the box for querying, caching, and more.
-- 🤖 [Zeus](https://github.com/graphql-editor/graphql-zeus) + [GraphQL code generator](https://the-guild.dev/graphql/codegen) - Fully typed GraphQL everywhere
+- 🤖 [Zeus](https://github.com/graphql-editor/graphql-zeus) + [GraphQL Codegen](https://the-guild.dev/graphql/codegen) - Fully typed GraphQL everywhere
 - 😊 [Joy UI](https://mui.com/joy-ui/getting-started/overview/) - Joy UI is a library of beautifully designed React UI components built to spark joy in the development process.
-- 🌙 Dark / Light mode toggle - Toggle between light and dark mode with a single click.
-- 🍞 [React Hot Toast]() - The best toast in town. Smoking hot React notifications.
+- 🌙 [Dark mode](https://mui.com/joy-ui/customization/dark-mode/) - Switch between light and dark mode with a single click.
+- 🍞 [React Hot Toast](https://github.com/timolins/react-hot-toast) - The best toast in town. Smoking hot React notifications.
 - 🌐 [i18next](https://www.i18next.com/) - The easiest way to translate your NextJs apps.
 - 🔍 [Next SEO](https://github.com/garmeeh/next-seo) - The easiest way to add SEO support to your Next.js app.
-- 📱 [Next PWA](
-- https://github.com/shadowwalker/next-pwa) - Zero config PWA plugin for Next.js, with workbox.
+- 📱 [Next PWA](https://github.com/shadowwalker/next-pwa) - Zero config PWA plugin for Next.js, with workbox.
 - 🪵 [Axiom logging](https://axiom.co/) - Send structured logs directly from your code and query, stream, & analyze. [Learn more](https://axiom.co/docs/integrations/nextjs).
 
 #### 🛠 Develop and test
@@ -55,7 +54,7 @@ Remaining simple at its core, this project is packed with useful tools that enha
 - 🚫 [lint-staged](https://github.com/okonet/lint-staged) — Run linters on git staged files
 - 🐶 [Husky](https://github.com/typicode/husky) — Running scripts before committing.
 
-##### 📤 Commit and publish
+##### 📤 Commit and release
 
 - 📝 [Commit-it](https://github.com/TimMikeladze/commit-it/) — A CLI tool to help you write stylish commit messages.
 - 🔼 [Release-it](https://github.com/release-it/release-it/) - release-it is a command line tool to automatically generate a new GitHub Release and populates it with the changes (commits) made since the last release.
