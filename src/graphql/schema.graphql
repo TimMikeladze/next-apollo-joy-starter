@@ -1,5 +1,5 @@
 """
-Require user to be signe
+Require user to be signed in
 """
 directive @auth(
   """

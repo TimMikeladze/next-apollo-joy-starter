@@ -40,8 +40,6 @@ const { rateLimitDirectiveTypeDefs, rateLimitDirectiveTransformer } =
     },
   });
 
-console.log(rateLimitDirectiveTypeDefs);
-
 const executableSchema = rateLimitDirectiveTransformer(
   directives.reduce(
     (schema: any, directive: any) => directive.transformer(schema),

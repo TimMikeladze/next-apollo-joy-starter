@@ -3,7 +3,15 @@ import { defaultFieldResolver, GraphQLError, GraphQLSchema } from 'graphql';
 
 export const createAuthDirective = (directiveName = `auth`) => {
   return {
-    typeDefs: `directive @${directiveName}(noError: Boolean) on OBJECT | FIELD_DEFINITION`,
+    typeDefs: `"""
+Require user to be signed in
+"""
+directive @${directiveName}(
+  """
+  No error will be thrown if the user is not signed in
+  """
+  noError: Boolean
+) on OBJECT | FIELD_DEFINITION`,
     transformer: (schema: GraphQLSchema) =>
       mapSchema(schema, {
         [MapperKind.OBJECT_FIELD](fieldConfig) {
