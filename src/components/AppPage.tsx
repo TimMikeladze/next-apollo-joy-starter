@@ -69,7 +69,12 @@ const AppPage = (props: PropsWithChildren) => {
                   alignItems="center"
                   spacing={1}
                 >
-                  <Link href={getHomeRoute()}>
+                  <Link
+                    href={getHomeRoute()}
+                    style={{
+                      textDecoration: `none`,
+                    }}
+                  >
                     <Typography
                       level="h4"
                       sx={{
