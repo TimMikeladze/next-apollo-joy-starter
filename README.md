@@ -32,8 +32,8 @@ Remaining simple at its core, this project is packed with useful tools that enha
 #### 💪 Starter code
 
 - 🔒 [Next Auth](https://next-auth.js.org/) - A complete open source authentication solution for Next.js applications. It is designed from the ground up to support Next.js and Serverless.
-- 🚀 [Apollo client and server](https://www.apollographql.com/) - Apollo is a great way to build your GraphQL stack. It comes with a great developer experience and a lot of features out of the box for querying, caching, and more.
-- 🤖 [Zeus](https://github.com/graphql-editor/graphql-zeus) + [GraphQL Codegen](https://the-guild.dev/graphql/codegen) - Fully typed GraphQL everywhere
+- 🚀 [Apollo client and server](https://www.apollographql.com/) - Apollo is a great way to build your GraphQL stack. It comes with a great community and a lot of features out of the box such as caching, query batching, and more.
+- 🤖 [Zeus](https://github.com/graphql-editor/graphql-zeus) + [GraphQL Codegen](https://the-guild.dev/graphql/codegen) - Type-safety anywhere GraphQL is used.
 - 😊 [Joy UI](https://mui.com/joy-ui/getting-started/overview/) - Joy UI is a library of beautifully designed React UI components built to spark joy in the development process.
 - 🌙 [Dark mode](https://mui.com/joy-ui/customization/dark-mode/) - Switch between light and dark mode with a single click.
 - 🍞 [React Hot Toast](https://github.com/timolins/react-hot-toast) - The best toast in town. Smoking hot React notifications.
