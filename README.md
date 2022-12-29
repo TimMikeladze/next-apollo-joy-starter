@@ -136,6 +136,12 @@ yarn build:analyze
 
 This project is configured to be a PWA out of the box, it just needs a few more steps from you to be production ready. Add your image assets and define your manifest files. Start by following the [instructions here](https://github.com/shadowwalker/next-pwa#step-2-add-manifest-file-example).
 
+### ⚙️ Customizing this starter
+
+This project is designed to be a starting point for your project. Each of its features has a small footprint and can be easily removed or replaced with your own.
+
+For example you easily replace Joy UI with Tailwind CSS with minimal effort while keeping the rest of the starter-kit intact.
+
 ## 🎊 Built a project with this starter kit?
 
 That's awesome! Please feel free to open a PR and add your project to the list below.
