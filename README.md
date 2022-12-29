@@ -10,7 +10,7 @@ This is a slightly opinionated starter kit for developing [Next.js](https://next
 
 ## 🏃‍ Get started
 
-To get started clone the repo. Using `npx degit` is a great way to get this done quickly as it will remove the `.git` folder plus extra files like the `LICENSE.md` or `FUNDING.yml` saving you the effort.
+To get started clone the repo. Using `npx degit` is a great way to get this done quickly as it will remove the `.git` folder plus extra files like the `LICENSE.md` or this very `README.md` file.
 
 ```console
 npx degit TimMikeladze/next-apollo-joy-starter my-app
