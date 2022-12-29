@@ -1,0 +1,15 @@
+{
+  "appName": "next-apollo-joy-starter",
+  "slogan": "A slightly opinionated starter kit for Next.js",
+  "signIn": "Sign in",
+  "signIntoApp": "Sign into {{ appName }}",
+  "signOut": "Sign out",
+  "turnDark": "Turn dark",
+  "turnLight": "Turn light",
+  "switchToLight": "Switch to light mode",
+  "switchToDark": "Switch to dark mode",
+  "home": "Home",
+  "providers" : {
+    "github": "GitHub"
+  }
+}

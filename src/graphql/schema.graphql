@@ -1,0 +1,15 @@
+directive @auth(noError: Boolean) on OBJECT | FIELD_DEFINITION
+
+scalar Date
+scalar DateTime
+scalar EmailAddress
+
+type User {
+  email: EmailAddress!
+  image: String
+  displayName: String
+}
+
+type Query {
+  signedInUser: User
+}
