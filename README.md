@@ -34,6 +34,7 @@ Remaining simple at its core, this project is packed with useful tools that enha
 - 🌙 Dark / Light mode toggle - Toggle between light and dark mode with a single click.
 - 🍞 [React Hot Toast]() - The best toast in town. Smoking hot React notifications.
 - 🌐 [i18next](https://www.i18next.com/) - The easiest way to translate your NextJs apps.
+- 🔍 [Next SEO](https://github.com/garmeeh/next-seo) - The easiest way to add SEO support to your Next.js app.
 - 🪵 [Axiom logging](https://axiom.co/) - Send structured logs directly from your code and query, stream, & analyze. [Learn more](https://axiom.co/docs/integrations/nextjs).
 
 #### 🛠 Develop and test

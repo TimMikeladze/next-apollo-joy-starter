@@ -22,7 +22,7 @@ const MyApp = ({
 
   return (
     <>
-      <DefaultSeo title={t(`appName`)} description={t(`slogan`)} />
+      <DefaultSeo title={t(`seoTitle`)} description={t(`seoDescription`)} />
       <ApolloProvider client={apollo}>
         <SessionProvider session={session}>
           <Head>
@@ -30,6 +30,7 @@ const MyApp = ({
               name="viewport"
               content="initial-scale=1, width=device-width"
             />
+            <title>{t(`pageTitle`)}</title>
           </Head>
           <AppBase>
             <AppPage>
