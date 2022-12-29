@@ -101,7 +101,9 @@ const UserMenu = () => {
           justifyContent="space-between"
         >
           <Typography level="body3">
-            {appVersionQuery.data?.appVersion?.version}
+            {appVersionQuery.data?.appVersion?.version && (
+              <>v{appVersionQuery.data?.appVersion?.version}</>
+            )}
           </Typography>
           <Typography level="body3">
             {appVersionQuery.data?.appVersion?.commit}
