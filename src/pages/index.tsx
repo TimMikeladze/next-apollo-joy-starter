@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps = withTranslations(async () => {
       `
 `,
     )
-    .splice(2, fileContents.length)
+    .splice(3, fileContents.length)
     .join(`\n`);
 
   const processedContent = await remark().use(html).process(fileContents);
