@@ -22,6 +22,7 @@
     "lint": "eslint --ignore-path .eslintignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .eslintignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install",
+    "release": "release-it",
     "commit": "commit-it",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
