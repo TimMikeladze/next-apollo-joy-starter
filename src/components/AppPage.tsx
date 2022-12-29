@@ -87,7 +87,7 @@ const AppPage = (props: PropsWithChildren) => {
                   </Link>
                   <Box sx={{ flex: 1 }} />
 
-                  <ThemeModeToggle />
+                  {session.status !== `authenticated` && <ThemeModeToggle />}
 
                   <IconButton
                     onClick={() => {
