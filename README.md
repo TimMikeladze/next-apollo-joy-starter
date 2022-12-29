@@ -4,13 +4,13 @@ Spend more time __building__ instead of _configuring_ your next project.
 
 ## 🚪 Intro
 
-This is a slightly opinionated starter kit for developing [Next.js](https://nextjs.org/) apps. It uses the [Joy UI](https://mui.com/joy-ui/getting-started/overview/) library from [MUI](https://mui.com/) along with the [Apollo](https://www.apollographql.com/) stack. All [GraphQL](https://graphql.org/) are operations are fully typed with [GraphQL Codegen](https://the-guild.dev/graphql/codegen) and [Zeus](https://github.com/graphql-editor/graphql-zeus). The starter kit also includes a fully functional [authentication system](https://next-auth.js.org/), [localization](https://www.i18next.com/), [PWA](https://github.com/shadowwalker/next-pwa), dark / light mode, PWA support and plenty of other goodies for a great developer experience right out of the box.
+This is a slightly opinionated starter kit for developing [Next.js](https://nextjs.org/) apps. It uses the [Joy UI](https://mui.com/joy-ui/getting-started/overview/) library from [MUI](https://mui.com/) along with the [Apollo](https://www.apollographql.com/) stack. All [GraphQL](https://graphql.org/) are operations are fully typed with [GraphQL Codegen](https://the-guild.dev/graphql/codegen) and [Zeus](https://github.com/graphql-editor/graphql-zeus). The starter kit also includes a fully functional [authentication system](https://next-auth.js.org/), [localization](https://www.i18next.com/), [PWA](https://github.com/shadowwalker/next-pwa) and plenty of other goodies for a great developer experience right out of the box.
 
 > 👋 Hello there! Follow me [@linesofcodedev](https://twitter.com/linesofcodedev) or visit [linesofcode.dev](https://linesofcode.dev) for more cool projects like this one.
 
 ## 🏃‍ Get started
 
-To get started clone the repo `npx degit` is a great way to do this as it will remove the `.git` folder plus extra files like the `LICENSE.md` or `FUNDING.yml`. Once cloned install all dependency with `yarn` and you are ready to go. Happy coding!
+To get started clone the repo. Using `npx degit` is a great get this done quickly as it will remove the `.git` folder plus extra files like the `LICENSE.md` or `FUNDING.yml` saving you the effort.
 
 ```console
 npx degit TimMikeladze/next-apollo-joy-starter my-app
@@ -18,9 +18,12 @@ npx degit TimMikeladze/next-apollo-joy-starter my-app
 yarn && yarn dev
 ```
 
+Once cloned just install all dependencies with `yarn` and you are ready to go. Happy coding!
+
+
 > ❗ Important note: This project uses [yarn](https://yarnpkg.com/) for managing dependencies. If you want to use another package manager, remove the `yarn.lock` and control-f for usages of `yarn` in the project and replace them with your package manager of choice.
 
-## ❔ What's included?
+## 📦 What's included?
 
 Remaining simple at its core, this project is packed with useful tools that enhance your experience while working with Next.js. Here is a list of the main features:
 
@@ -43,7 +46,7 @@ Remaining simple at its core, this project is packed with useful tools that enha
 - 📖 [Storybook](https://storybook.js.org/) - Build UI components and pages in isolation. It streamlines UI development, testing, and documentation.
 - 🧪 [Jest](https://jestjs.io/) - A testing framework for JavaScript. Preconfigured to work with TypeScript and JSX.
 - 🐙 [Run tests via Github Actions](https://docs.github.com/en/actions) - CI/CD workflows for your package. Run tests on every commit plus integrate with Github Releases to automate publishing package to NPM and Storybook to Github Pages.
-- 📦 [Bundle analyzer](Webpack Bundle Analyzer) - Visualize the size of Next.js output files with an interactive zoomable treemap.
+- 📊 [Bundle analyzer](Webpack Bundle Analyzer) - Visualize the size of Next.js output files with an interactive zoomable treemap.
 
 ##### 🧑‍🎨 Lint and format
 
