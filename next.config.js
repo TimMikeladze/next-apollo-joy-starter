@@ -2,6 +2,10 @@ const { i18n } = require('./next-i18next.config');
 
 const { withAxiom } = require('next-axiom');
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const { version } = require('./package.json');
 
 /** @type {import('next').NextConfig} */
@@ -22,4 +26,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withAxiom(nextConfig);
+module.exports = withBundleAnalyzer(withAxiom(nextConfig));

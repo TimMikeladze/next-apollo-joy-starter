@@ -4,11 +4,19 @@ import { useTranslation } from 'next-i18next';
 import ThemeModeToggle from './ThemeModeToggle';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import SignInDialog from './SignInDialog';
 import Head from 'next/head';
-import { Toaster } from 'react-hot-toast';
+
 import UserMenu from './UserMenu';
 import { getHomeRoute } from '@/util/routes';
+import dynamic from 'next/dynamic';
+
+const AppToaster = dynamic(() => import(`@/components/AppToaster`), {
+  ssr: true,
+});
+
+const SignInDialog = dynamic(() => import(`@/components/SignInDialog`), {
+  ssr: true,
+});
 
 const AppPage = (props: PropsWithChildren) => {
   const { t } = useTranslation();
@@ -24,12 +32,7 @@ const AppPage = (props: PropsWithChildren) => {
           height: `100vh`,
         })}
       >
-        <Toaster
-          position="bottom-center"
-          containerStyle={{
-            zIndex: 99999,
-          }}
-        />
+        <AppToaster />
         <SignInDialog
           open={signInDialogOpen}
           onClose={() => setSignInDialogOpen(false)}

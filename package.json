@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "concurrently \"next dev\" \"yarn codegen:watch\"",
     "build": "next build",
+    "build:analyze": "ANALYZE=true yarn build",
     "start": "next start",
     "type-check": "tsc --noEmit",
     "test": "jest --forceExit --passWithNoTests",
@@ -89,6 +90,7 @@
     "@graphql-codegen/cli": "2.16.2",
     "@graphql-codegen/typescript": "2.8.6",
     "@graphql-codegen/typescript-resolvers": "2.7.11",
+    "@next/bundle-analyzer": "13.1.1",
     "@ngneat/falso": "6.3.2",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",

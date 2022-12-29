@@ -39,6 +39,7 @@ yarn && yarn dev
 - 📖 [Storybook](https://storybook.js.org/) - Build UI components and pages in isolation. It streamlines UI development, testing, and documentation.
 - 🧪 [Jest](https://jestjs.io/) - A testing framework for JavaScript. Preconfigured to work with TypeScript and JSX.
 - 🐙 [Run tests via Github Actions](https://docs.github.com/en/actions) - CI/CD workflows for your package. Run tests on every commit plus integrate with Github Releases to automate publishing package to NPM and Storybook to Github Pages.
+- 📦 [Bundle analyzer](Webpack Bundle Analyzer) - Visualize the size of Next.js output files with an interactive zoomable treemap.
 
 ##### Lint and format
 
@@ -124,4 +125,12 @@ If you want to build your app for production on your local machine, within a con
 
 ```console
 yarn build
+```
+
+### Analyzing bundle size
+
+To analyze the page bundles of your Next.js app, run the following command:
+
+```console
+yarn build:analyze
 ```

@@ -1,19 +1,29 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { GetServerSidePropsContext } from 'next';
-import { Stack } from '@mui/joy';
+import { GetStaticProps } from 'next';
+import { Stack, Typography } from '@mui/joy';
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import { withTranslations } from '@/util/i18n/withTranslations';
 
-const Landing = () => {
-  return <Stack spacing={1}></Stack>;
+const Home = () => {
+  const { t } = useTranslation();
+  return (
+    <Stack spacing={1}>
+      <Typography level="h5">{t(`helloThere`)}</Typography>
+      <Typography level="body2">
+        <Link href="https://github.com/TimMikeladze/next-apollo-joy-starter">
+          {t(`learnMore`, {
+            url: t(`learnMoreUrl`),
+          })}
+        </Link>
+      </Typography>
+    </Stack>
+  );
 };
 
-export default Landing;
+export default Home;
 
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext,
-) => {
+export const getStaticProps: GetStaticProps = withTranslations(() => {
   return {
-    props: {
-      ...(await serverSideTranslations(context.locale as string, [`common`])),
-    },
+    props: {},
   };
-};
+});
