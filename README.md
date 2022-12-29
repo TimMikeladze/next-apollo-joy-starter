@@ -51,7 +51,7 @@ Remaining simple at its core, this project is packed with useful tools that enha
 
 ##### 🧑‍🎨 Lint and format
 
-- ☑️ [ESLint](https://eslint.org/) - A linter for JavaScript. Includes a simple configuration for React projects based on the recommended ESLint and AirBnB configs.
+- ☑️ [ESLint](https://eslint.org/) - A linter for JavaScript. Includes a simple configuration for React projects based on the recommended NextJS ESLint config.
 - 🎨 [Prettier](https://prettier.io/) - An opinionated code formatter.
 - 🚫 [lint-staged](https://github.com/okonet/lint-staged) — Run linters on git staged files
 - 🐶 [Husky](https://github.com/typicode/husky) — Running scripts before committing.
