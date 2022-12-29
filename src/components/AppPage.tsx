@@ -1,14 +1,22 @@
-import { Box, Button, Divider, Sheet, Stack, Typography } from '@mui/joy';
+import {
+  Box,
+  Button,
+  Divider,
+  IconButton,
+  Sheet,
+  Stack,
+  Typography,
+} from '@mui/joy';
 import { PropsWithChildren, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import ThemeModeToggle from './ThemeModeToggle';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import Head from 'next/head';
-
 import UserMenu from './UserMenu';
 import { getHomeRoute } from '@/util/routes';
 import dynamic from 'next/dynamic';
+import { GitHub } from '@mui/icons-material';
 
 const AppToaster = dynamic(() => import(`@/components/AppToaster`), {
   ssr: true,
@@ -28,9 +36,9 @@ const AppPage = (props: PropsWithChildren) => {
         <title>{t(`appName`)}</title>
       </Head>
       <Sheet
-        sx={() => ({
-          height: `100vh`,
-        })}
+        sx={{
+          minHeight: `100vh`,
+        }}
       >
         <AppToaster />
         <SignInDialog
@@ -55,12 +63,7 @@ const AppPage = (props: PropsWithChildren) => {
                   p: 2,
                 })}
               >
-                <Stack
-                  direction="row"
-                  flexWrap="wrap"
-                  spacing={1}
-                  alignItems="center"
-                >
+                <Stack direction="row" flexWrap="wrap" alignItems="center">
                   <Link href={getHomeRoute()}>
                     <Typography
                       level="h4"
@@ -75,6 +78,16 @@ const AppPage = (props: PropsWithChildren) => {
                   <Box sx={{ flex: 1 }} />
 
                   <ThemeModeToggle />
+
+                  <IconButton
+                    onClick={() => {
+                      window.open(t(`learnMoreUrl`), `_blank`);
+                    }}
+                    variant="plain"
+                  >
+                    <GitHub />
+                  </IconButton>
+
                   {session.status !== `authenticated` && (
                     <>
                       <Button onClick={() => setSignInDialogOpen(true)}>

@@ -4,13 +4,9 @@
   "signIn": "Sign in",
   "signIntoApp": "Sign into {{ appName }}",
   "signOut": "Sign out",
-  "turnDark": "Turn dark",
-  "turnLight": "Turn light",
   "switchToLightMode": "Switch to light mode",
   "switchToDarkMode": "Switch to dark mode",
   "home": "Home",
-  "helloThere": "\uD83D\uDC4B Hello there!",
-  "learnMore": "Learn more about this project at: {{ url }}",
   "learnMoreUrl": "https://github.com/TimMikeladze/next-apollo-joy-starter",
   "providers" : {
     "github": "GitHub"

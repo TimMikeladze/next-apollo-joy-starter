@@ -1,29 +1,44 @@
 import { GetStaticProps } from 'next';
-import { Stack, Typography } from '@mui/joy';
-import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import { Stack } from '@mui/joy';
 import { withTranslations } from '@/util/i18n/withTranslations';
+import { join } from 'path';
+import { readFileSync } from 'fs';
+import { remark } from 'remark';
+import html from 'remark-html';
 
-const Home = () => {
-  const { t } = useTranslation();
+export interface HomePageProps {
+  contentHtml: string;
+}
+
+const HomePage = (props: HomePageProps) => {
   return (
     <Stack spacing={1}>
-      <Typography level="h5">{t(`helloThere`)}</Typography>
-      <Typography level="body2">
-        <Link href="https://github.com/TimMikeladze/next-apollo-joy-starter">
-          {t(`learnMore`, {
-            url: t(`learnMoreUrl`),
-          })}
-        </Link>
-      </Typography>
+      <div dangerouslySetInnerHTML={{ __html: props.contentHtml }} />
     </Stack>
   );
 };
 
-export default Home;
+export default HomePage;
 
-export const getStaticProps: GetStaticProps = withTranslations(() => {
+export const getStaticProps: GetStaticProps = withTranslations(async () => {
+  const fullPath = join(`.`, `README.md`);
+  let fileContents = readFileSync(fullPath, `utf8`);
+
+  fileContents = fileContents
+    .split(
+      `
+`,
+    )
+    .splice(2, fileContents.length)
+    .join(`\n`);
+
+  const processedContent = await remark().use(html).process(fileContents);
+
+  const contentHtml = processedContent.toString();
+
   return {
-    props: {},
+    props: {
+      contentHtml,
+    },
   };
 });

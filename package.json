@@ -80,6 +80,8 @@
     "react-hook-form": "7.41.2",
     "react-hot-toast": "2.4.0",
     "react-i18next": "12.1.1",
+    "remark": "14.0.2",
+    "remark-html": "15.0.1",
     "unfetch": "4.2.0"
   },
   "devDependencies": {

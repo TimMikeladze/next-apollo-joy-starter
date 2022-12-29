@@ -18,7 +18,7 @@ npx degit TimMikeladze/next-apollo-joy-starter my-app
 yarn && yarn dev
 ```
 
-❗Important note: This project uses [yarn](https://yarnpkg.com/) for managing dependencies. If you want to use another package manager, remove the `yarn.lock` and control-f for usages of `yarn` in the project and replace them with your package manager of choice.
+> ❗ Important note: This project uses [yarn](https://yarnpkg.com/) for managing dependencies. If you want to use another package manager, remove the `yarn.lock` and control-f for usages of `yarn` in the project and replace them with your package manager of choice.
 
 ## What's included?
 
