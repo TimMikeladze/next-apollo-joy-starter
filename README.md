@@ -1,10 +1,10 @@
 # next-apollo-joy-starter
 
-Spend more time __building__ instead of _configuring_ your nth project.
+Spend more time __building__ instead of _configuring_ your next project.
 
 ## Introduction
 
-This is a slightly opinionated starter kit for developing Next.js apps. It uses the joy UI library from MUI along with the Apollo stack. All GraphQL are operations are fully typed with GraphQL Codegen and Zeus. The starter kit also includes a fully functional authentication system, localization, dark / light mode, and plenty of other goodies for a great developer experience right out of the box.
+This is a slightly opinionated starter kit for developing [Next.js](https://nextjs.org/) apps. It uses the [Joy UI](https://mui.com/joy-ui/getting-started/overview/) library from [MUI](https://mui.com/) along with the [Apollo](https://www.apollographql.com/) stack. All [GraphQL](https://graphql.org/) are operations are fully typed with [GraphQL Codegen](https://the-guild.dev/graphql/codegen) and [Zeus](https://github.com/graphql-editor/graphql-zeus). The starter kit also includes a fully functional [authentication system](https://next-auth.js.org/), [localization](https://www.i18next.com/), dark / light mode, and plenty of other goodies for a great developer experience right out of the box.
 
 > 👋 Hello there! Follow me [@linesofcodedev](https://twitter.com/linesofcodedev) or visit [linesofcode.dev](https://linesofcode.dev) for more cool projects like this.
 
@@ -24,14 +24,15 @@ yarn && yarn dev
 
 #### Starter code
 
-- 🚀 [Next.Js]()
-- 🚀 [Next Auth]()
-- 🚀 [Apollo client and server]()
-- 🚀 [GraphQL code generator]()
-- 🚀 [Zeus GraphQL]()
-- 🚀 [Joy UI]()
-- 🚀 [Dark / Light mode toggle]()
-- 🚀 [React Hot Toast]()
+- 🔒 [Next Auth](https://next-auth.js.org/) - A complete open source authentication solution for Next.js applications. It is designed from the ground up to support Next.js and Serverless.
+- 🚀 [Apollo client and server](https://www.apollographql.com/) - Apollo is a great way to build your GraphQL stack. It comes with a great developer experience and a lot of features out of the box for querying, caching, and more.
+- 🤖 [Zeus](https://github.com/graphql-editor/graphql-zeus) + [GraphQL code generator](https://the-guild.dev/graphql/codegen) - Fully typed GraphQL everywhere
+- 😊 [Joy UI](https://mui.com/joy-ui/getting-started/overview/) - Joy UI is a library of beautifully designed React UI components built to spark joy in the development process.
+- 🌙 Dark / Light mode toggle - Toggle between light and dark mode with a single click.
+- 🍞 [React Hot Toast]() - The best toast in town. Smoking hot React notifications.
+- 🌐 [i18next](https://www.i18next.com/) - The easiest way to translate your NextJs apps.
+
+- 🪵 [Axiom logging](https://axiom.co/) - Send structured logs directly from your code and query, stream, & analyze. [Learn more](https://axiom.co/docs/integrations/nextjs).
 
 #### Develop and test
 
