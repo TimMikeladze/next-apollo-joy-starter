@@ -33,7 +33,7 @@ const AppPage = (props: PropsWithChildren) => {
   return (
     <>
       <Head>
-        <title>{t(`appName`)}</title>
+        <title>{t(`pageTitle`)}</title>
       </Head>
       <Sheet
         sx={{
