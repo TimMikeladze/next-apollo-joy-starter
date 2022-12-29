@@ -1,11 +1,10 @@
-# 🇳 🚀 😊
-# Next.js + Apollo GraphQL + Joy UI
+# 🇳 🚀 😊  Next.js - Apollo GraphQL - Joy UI
 
 Spend more time __building__ instead of _configuring_ your next project.
 
 ## 🚪 Intro
 
-This is a slightly opinionated starter kit for developing [Next.js](https://nextjs.org/) apps. It uses the [Joy UI](https://mui.com/joy-ui/getting-started/overview/) library from [MUI](https://mui.com/) along with the [Apollo](https://www.apollographql.com/) stack. All [GraphQL](https://graphql.org/) are operations are fully typed with [GraphQL Codegen](https://the-guild.dev/graphql/codegen) and [Zeus](https://github.com/graphql-editor/graphql-zeus). The starter kit also includes a fully functional [authentication system](https://next-auth.js.org/), [localization](https://www.i18next.com/), dark / light mode, and plenty of other goodies for a great developer experience right out of the box.
+This is a slightly opinionated starter kit for developing [Next.js](https://nextjs.org/) apps. It uses the [Joy UI](https://mui.com/joy-ui/getting-started/overview/) library from [MUI](https://mui.com/) along with the [Apollo](https://www.apollographql.com/) stack. All [GraphQL](https://graphql.org/) are operations are fully typed with [GraphQL Codegen](https://the-guild.dev/graphql/codegen) and [Zeus](https://github.com/graphql-editor/graphql-zeus). The starter kit also includes a fully functional [authentication system](https://next-auth.js.org/), [localization](https://www.i18next.com/), [PWA](https://github.com/shadowwalker/next-pwa), dark / light mode, PWA support and plenty of other goodies for a great developer experience right out of the box.
 
 > 👋 Hello there! Follow me [@linesofcodedev](https://twitter.com/linesofcodedev) or visit [linesofcode.dev](https://linesofcode.dev) for more cool projects like this one.
 
@@ -35,6 +34,8 @@ Remaining simple at its core, this project is packed with useful tools that enha
 - 🍞 [React Hot Toast]() - The best toast in town. Smoking hot React notifications.
 - 🌐 [i18next](https://www.i18next.com/) - The easiest way to translate your NextJs apps.
 - 🔍 [Next SEO](https://github.com/garmeeh/next-seo) - The easiest way to add SEO support to your Next.js app.
+- 📱 [Next PWA](
+- https://github.com/shadowwalker/next-pwa) - Zero config PWA plugin for Next.js, with workbox.
 - 🪵 [Axiom logging](https://axiom.co/) - Send structured logs directly from your code and query, stream, & analyze. [Learn more](https://axiom.co/docs/integrations/nextjs).
 
 #### 🛠 Develop and test
@@ -127,6 +128,10 @@ To analyze the page bundles of your Next.js app, run the following command:
 ```console
 yarn build:analyze
 ```
+
+### 📱 Progressive Web App
+
+This project is configured to be a PWA out of the box, it just needs a few more steps from you to be production ready. Add your image assets and define your manifest files. Start by following the [instructions here](https://github.com/shadowwalker/next-pwa#step-2-add-manifest-file-example).
 
 ## 🎊 Built a project with this starter kit?
 

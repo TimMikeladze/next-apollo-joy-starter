@@ -28,7 +28,7 @@ const MyApp = ({
           <Head>
             <meta
               name="viewport"
-              content="initial-scale=1, width=device-width"
+              content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
             />
             <title>{t(`pageTitle`)}</title>
           </Head>
