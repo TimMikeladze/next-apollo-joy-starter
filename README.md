@@ -58,7 +58,6 @@ Remaining simple at its core, this project is packed with useful tools that enha
 
 - 📝 [Commit-it](https://github.com/TimMikeladze/commit-it/) — A CLI tool to help you write stylish commit messages.
 - 🔼 [Release-it](https://github.com/release-it/release-it/) - release-it is a command line tool to automatically generate a new GitHub Release and populates it with the changes (commits) made since the last release.
-- 📚 [Deploy storybook via Github Actions](https://docs.github.com/en/actions) - CI/CD workflows for your package. Run tests on every commit plus integrate with Github Releases to automate publishing package to NPM and Storybook to Github Pages.
 - 🏗️ [Renovate](https://github.com/renovatebot/renovate) - Universal dependency update tool that fits into your workflows. Configured to periodically check your dependencies for updates and send automated pull requests.
 
 ## 🎓 Usage
@@ -109,9 +108,7 @@ yarn commit
 
 ### ✅ Releasing & tagging
 
-Create a semantic version tag and publish to Github Releases. When a new release is detected a Github Action will automatically publish your storybook to Github pages.
-
-As part of this process a git tag will also be created on the current branch.
+Create a semantic version tag and publish to Github Releases. As part of this process a git tag will also be created on the current branch.
 
 Learn more about how to use the `release-it` command [here](https://github.com/release-it/release-it).
 
