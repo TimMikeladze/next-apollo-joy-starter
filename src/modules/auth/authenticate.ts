@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Session } from 'next-auth';
-import { getSession } from 'next-auth/react';
+import { Session, unstable_getServerSession } from 'next-auth';
+import { nextAuthConfig } from '@/pages/api/auth/[...nextauth]';
 
 export const authenticate = async (args: {
   req: NextApiRequest;
@@ -9,7 +9,11 @@ export const authenticate = async (args: {
   let session: Session;
 
   try {
-    session = await getSession({ req: args.req });
+    session = await unstable_getServerSession(
+      args.req,
+      args.res,
+      nextAuthConfig,
+    );
   } catch (error) {
     // log.error(error as any);
   }
