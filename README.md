@@ -92,14 +92,6 @@ Or simply run all the tests
 yarn test
 ```
 
-### 🚧 Building
-
-Build the Next.js app for production.
-
-```console
-yarn build
-```
-
 ### 📒 Committing
 
 When you are ready to commit simply run the following command to get a well formatted commit message. All staged files will automatically be linted and fixed as well.
@@ -118,9 +110,9 @@ Learn more about how to use the `release-it` command [here](https://github.com/r
 yarn release
 ```
 
-### 📦 Deploying & building
+### 🚧 Building & deploying
 
-This project can be deployed anywhere where Next.js is supported. I suggest using [Vercel](https://vercel.com) with the GitHub integration to quickly deploy an app to production.
+This project can be deployed anywhere where Next.js can run. I suggest using [Vercel](https://vercel.com) with the GitHub integration to quickly deploy an app to production.
 
 If you want to build your app for production on your local machine, within a container, etc, simply run the following command:
 
