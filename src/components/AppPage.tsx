@@ -63,7 +63,12 @@ const AppPage = (props: PropsWithChildren) => {
                   p: 2,
                 })}
               >
-                <Stack direction="row" flexWrap="wrap" alignItems="center">
+                <Stack
+                  direction="row"
+                  flexWrap="wrap"
+                  alignItems="center"
+                  spacing={1}
+                >
                   <Link href={getHomeRoute()}>
                     <Typography
                       level="h4"

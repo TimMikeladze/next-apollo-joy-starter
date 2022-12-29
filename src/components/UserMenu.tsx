@@ -44,7 +44,7 @@ const UserMenu = () => {
     <>
       <Avatar
         onClick={handleOpen}
-        sx={{ ml: 1, cursor: `pointer` }}
+        sx={{ cursor: `pointer` }}
         src={signedInUserQuery.data?.signedInUser?.image}
       />
       <Menu

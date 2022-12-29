@@ -1,4 +1,5 @@
-# 🇳 🚀 😊 Next.js + Apollo GraphQL + Joy UI
+# 🇳 🚀 😊
+# Next.js + Apollo GraphQL + Joy UI
 
 Spend more time __building__ instead of _configuring_ your next project.
 
