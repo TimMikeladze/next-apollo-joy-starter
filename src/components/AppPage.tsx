@@ -48,7 +48,7 @@ const AppPage = (props: PropsWithChildren) => {
               })}
             >
               <Sheet
-                sx={(theme) => ({
+                sx={() => ({
                   p: 2,
                 })}
               >

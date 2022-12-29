@@ -1,12 +1,7 @@
 import isDev from './is/isDev';
 import isBrowser from './is/isBrowser';
 
-const getAppUrl = (
-  path = ``,
-  noHttp?: boolean,
-  noPort?: boolean,
-  subdomain?: string,
-) => {
+const getAppUrl = (path = ``, noHttp?: boolean, noPort?: boolean) => {
   if (isDev()) {
     return `${noHttp ? `` : `http://`}${
       isBrowser() ? window.location.hostname : `localhost`
