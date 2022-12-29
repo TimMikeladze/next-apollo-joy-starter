@@ -12,10 +12,12 @@ module.exports = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/',
   }),
+  extensionsToTreatAsEsm: ['.ts'],
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',
       {
+        isolatedModules: true,
         useESM: true,
       },
     ],
