@@ -1,8 +1,35 @@
-directive @auth(noError: Boolean) on OBJECT | FIELD_DEFINITION
+"""
+Require user to be signe
+"""
+directive @auth(
+  """
+  No error will be thrown if the user is not signed in
+  """
+  noError: Boolean
+) on OBJECT | FIELD_DEFINITION
+
+"""
+Controls the rate of traffic.
+"""
+directive @rateLimit(
+  """
+  Number of occurrences allowed over duration.
+  """
+  limit: Int! = 60
+  """
+  Number of seconds before limit is reset.
+  """
+  duration: Int! = 60
+) on OBJECT | FIELD_DEFINITION
 
 scalar Date
 scalar DateTime
 scalar EmailAddress
+
+type AppVersion {
+  commit: String!
+  version: String!
+}
 
 type User {
   email: EmailAddress!
@@ -11,5 +38,6 @@ type User {
 }
 
 type Query {
-  signedInUser: User
+  signedInUser: User @auth(noError: true)
+  appVersion: AppVersion!
 }

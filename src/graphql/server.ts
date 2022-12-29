@@ -13,11 +13,13 @@ import { ApolloServer, ContextFunction } from '@apollo/server';
 import schema from './schema.graphql';
 import { Resolvers } from '@/generated/graphql';
 import auth from '@/modules/auth/resolvers';
+import misc from '@/modules/misc/resolvers';
 import { createAuthDirective } from './directives';
 import { ApolloServerErrorCode } from '@apollo/server/errors';
 import { Session } from 'next-auth';
 import { authenticate } from '@/modules/auth/authenticate';
 import { TFunction } from 'next-i18next';
+import parseIp from '@/util/parseIp';
 
 const directives: any = [createAuthDirective()];
 
@@ -29,19 +31,16 @@ export const resolvers: Resolvers = merge(
     EmailAddress: graphqlScalars.EmailAddress,
   },
   auth,
+  misc,
 );
-
 const { rateLimitDirectiveTypeDefs, rateLimitDirectiveTransformer } =
   rateLimitDirective<Context>({
-    keyGenerator: (
-      directiveArgs: any,
-      source: any,
-      args: any,
-      context: any,
-    ) => {
-      return [context.ip, context.session?.email].filter(Boolean).join(`:`);
+    keyGenerator: (rateLimitArgs, _, args, ctx) => {
+      return [ctx.ip, ctx.session?.user?.email].filter(Boolean).join(`:`);
     },
   });
+
+console.log(rateLimitDirectiveTypeDefs);
 
 const executableSchema = rateLimitDirectiveTransformer(
   directives.reduce(
@@ -58,6 +57,7 @@ const executableSchema = rateLimitDirectiveTransformer(
 );
 
 export interface Context {
+  ip?: string;
   req?: GetServerSidePropsContext['req'];
   res?: GetServerSidePropsContext['res'];
   session?: Session;
@@ -69,12 +69,13 @@ export const createApolloContext = async (
   session: Session,
 ): Promise<Context> => {
   const t = await getI18n();
-
+  const ip = parseIp(req);
   return {
     req,
     res,
     t,
     session,
+    ip,
   };
 };
 

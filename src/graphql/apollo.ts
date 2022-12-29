@@ -13,7 +13,7 @@ import isEqual from 'lodash/isEqual';
 import type { AppProps } from 'next/app';
 import { useMemo } from 'react';
 import getAppUrl from '@/util/getAppUrl';
-import { DEFAULT_DEBOUNCE } from '@/util/constants';
+import { DEFAULT_DEBOUNCE_RATE } from '@/util/constants';
 import DebounceLink from 'apollo-link-debounce';
 import { BatchHttpLink } from '@apollo/client/link/batch-http';
 import toast from 'react-hot-toast';
@@ -67,7 +67,7 @@ const createApolloClient = (headers: IncomingHttpHeaders | null = null) => {
           `[Network error]: ${error.networkError}. Backend is unreachable. Is it running?`,
         );
     }) as any,
-    new DebounceLink(DEFAULT_DEBOUNCE),
+    new DebounceLink(DEFAULT_DEBOUNCE_RATE),
   ]).split(
     (operation: any) =>
       operation.query.definitions.some(

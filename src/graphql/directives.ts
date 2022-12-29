@@ -17,7 +17,7 @@ export const createAuthDirective = (directiveName = `auth`) => {
             return {
               ...fieldConfig,
               async resolve(root, args, ctx, info) {
-                const authed = !!ctx.session;
+                const authed = !!ctx.session?.user;
                 if (!authed) {
                   if (!directive.noError) {
                     throw new GraphQLError(`Not signed in`, {

@@ -11,7 +11,6 @@ const nextConfig = {
   i18n,
   env: {
     NEXT_PUBLIC_VERSION: version,
-    PASSWORD_PROTECT: process.env.NODE_ENV !== 'development',
   },
   webpack: (config, { isServer }) => {
     config.module.rules.push({

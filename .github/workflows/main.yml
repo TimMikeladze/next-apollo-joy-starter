@@ -1,10 +1,6 @@
 name: Main CI workflow
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
   run-ci:
@@ -34,3 +30,6 @@ jobs:
 
       - name: Test
         run: yarn test:ci
+
+      - name: Build storybook
+        run: yarn build-storybook

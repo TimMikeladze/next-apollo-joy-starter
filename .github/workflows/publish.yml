@@ -1,0 +1,20 @@
+# This workflow will run whenever a Github release is created
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-storybook:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+      - run: yarn
+      - run: yarn deploy-storybook --ci
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

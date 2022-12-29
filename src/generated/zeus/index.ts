@@ -838,6 +838,11 @@ export type ValueTypes = {
     ["Date"]:unknown;
 	["DateTime"]:unknown;
 	["EmailAddress"]:unknown;
+	["AppVersion"]: AliasType<{
+	commit?:boolean | `@${string}`,
+	version?:boolean | `@${string}`,
+		__typename?: boolean | `@${string}`
+}>;
 	["User"]: AliasType<{
 	email?:boolean | `@${string}`,
 	image?:boolean | `@${string}`,
@@ -846,6 +851,7 @@ export type ValueTypes = {
 }>;
 	["Query"]: AliasType<{
 	signedInUser?:ValueTypes["User"],
+	appVersion?:ValueTypes["AppVersion"],
 		__typename?: boolean | `@${string}`
 }>
   }
@@ -854,6 +860,11 @@ export type ResolverInputTypes = {
     ["Date"]:unknown;
 	["DateTime"]:unknown;
 	["EmailAddress"]:unknown;
+	["AppVersion"]: AliasType<{
+	commit?:boolean | `@${string}`,
+	version?:boolean | `@${string}`,
+		__typename?: boolean | `@${string}`
+}>;
 	["User"]: AliasType<{
 	email?:boolean | `@${string}`,
 	image?:boolean | `@${string}`,
@@ -862,6 +873,7 @@ export type ResolverInputTypes = {
 }>;
 	["Query"]: AliasType<{
 	signedInUser?:ResolverInputTypes["User"],
+	appVersion?:ResolverInputTypes["AppVersion"],
 		__typename?: boolean | `@${string}`
 }>
   }
@@ -870,13 +882,18 @@ export type ModelTypes = {
     ["Date"]:any;
 	["DateTime"]:any;
 	["EmailAddress"]:any;
+	["AppVersion"]: {
+		commit: string,
+	version: string
+};
 	["User"]: {
 		email: ModelTypes["EmailAddress"],
 	image?: string | undefined,
 	displayName?: string | undefined
 };
 	["Query"]: {
-		signedInUser?: ModelTypes["User"] | undefined
+		signedInUser?: ModelTypes["User"] | undefined,
+	appVersion: ModelTypes["AppVersion"]
 }
     }
 
@@ -884,6 +901,11 @@ export type GraphQLTypes = {
     ["Date"]: "scalar" & { name: "Date" };
 	["DateTime"]: "scalar" & { name: "DateTime" };
 	["EmailAddress"]: "scalar" & { name: "EmailAddress" };
+	["AppVersion"]: {
+	__typename: "AppVersion",
+	commit: string,
+	version: string
+};
 	["User"]: {
 	__typename: "User",
 	email: GraphQLTypes["EmailAddress"],
@@ -892,7 +914,8 @@ export type GraphQLTypes = {
 };
 	["Query"]: {
 	__typename: "Query",
-	signedInUser?: GraphQLTypes["User"] | undefined
+	signedInUser?: GraphQLTypes["User"] | undefined,
+	appVersion: GraphQLTypes["AppVersion"]
 }
     }
 

@@ -1,6 +1,7 @@
 import NextAuth, { AuthOptions } from 'next-auth';
 import isDowntime from '@/util/is/isDowntime';
 import Github from 'next-auth/providers/github';
+import isPreview from '@/util/is/isPreview';
 
 export const nextAuthConfig: AuthOptions = {
   providers: [
@@ -38,7 +39,7 @@ export const nextAuthConfig: AuthOptions = {
         throw new Error(`No email`);
       }
 
-      if (process.env.NEXT_PUBLIC_VERCEL_ENV === `preview`) {
+      if (isPreview() && process.env.ALLOWED_EMAILS) {
         const allowedEmails = process.env.ALLOWED_EMAILS?.split(`,`);
         if (!allowedEmails?.includes(user.email)) {
           return false;

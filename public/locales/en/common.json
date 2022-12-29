@@ -6,8 +6,8 @@
   "signOut": "Sign out",
   "turnDark": "Turn dark",
   "turnLight": "Turn light",
-  "switchToLight": "Switch to light mode",
-  "switchToDark": "Switch to dark mode",
+  "switchToLightMode": "Switch to light mode",
+  "switchToDarkMode": "Switch to dark mode",
   "home": "Home",
   "providers" : {
     "github": "GitHub"
