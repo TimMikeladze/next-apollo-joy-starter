@@ -45,6 +45,7 @@ Remaining simple at its core, this project is packed with useful tools that enha
 #### 🛠 Develop and test
 
 - 📖 [Storybook](https://storybook.js.org/) - Build UI components and pages in isolation. It streamlines UI development, testing, and documentation.
+- 🛝 [Apollo Sandbox](https://www.apollographql.com/blog/announcement/platform/apollo-sandbox-an-open-graphql-ide-for-local-development/) - A free, in-browser GraphQL IDE for exploring your schema and making queries.
 - 🧪 [Jest](https://jestjs.io/) - A testing framework for JavaScript. Preconfigured to work with TypeScript and JSX.
 - 🐙 [Run tests via Github Actions](https://docs.github.com/en/actions) - CI/CD workflows for your package. Run tests on every commit plus integrate with Github Releases to automate publishing package to NPM and Storybook to Github Pages.
 - 📊 [Bundle analyzer](https://github.com/josselinbuils/next-bundle-analyzer) - Visualize the size of Next.js build output files with an interactive zoomable treemap.
@@ -71,6 +72,8 @@ Start the Next.js development server and watch GraphQL files for code generation
 ```console
 yarn dev
 ```
+
+Need to test your GraphQL queries or explore your schema? Use Apollo Sandbox by visiting http://localhost:3000/api/graphql in your browser.
 
 Working on the UI? Start Storybook to develop components in isolation.
 
