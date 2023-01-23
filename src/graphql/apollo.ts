@@ -8,7 +8,6 @@ import {
 import { onError } from '@apollo/link-error';
 import merge from 'deepmerge';
 import { IncomingHttpHeaders } from 'http';
-import fetch from 'unfetch';
 import isEqual from 'lodash/isEqual';
 import type { AppProps } from 'next/app';
 import { useMemo } from 'react';
