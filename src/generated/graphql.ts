@@ -1,4 +1,5 @@
 import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
+import { Context } from 'src/graph/server';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -132,16 +133,16 @@ export type AuthDirectiveArgs = {
   noError?: Maybe<Scalars['Boolean']>;
 };
 
-export type AuthDirectiveResolver<Result, Parent, ContextType = any, Args = AuthDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
+export type AuthDirectiveResolver<Result, Parent, ContextType = Context, Args = AuthDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
 
 export type RateLimitDirectiveArgs = {
   duration?: Scalars['Int'];
   limit?: Scalars['Int'];
 };
 
-export type RateLimitDirectiveResolver<Result, Parent, ContextType = any, Args = RateLimitDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
+export type RateLimitDirectiveResolver<Result, Parent, ContextType = Context, Args = RateLimitDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
 
-export type AppVersionResolvers<ContextType = any, ParentType extends ResolversParentTypes['AppVersion'] = ResolversParentTypes['AppVersion']> = {
+export type AppVersionResolvers<ContextType = Context, ParentType extends ResolversParentTypes['AppVersion'] = ResolversParentTypes['AppVersion']> = {
   commit?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   version?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
@@ -159,19 +160,19 @@ export interface EmailAddressScalarConfig extends GraphQLScalarTypeConfig<Resolv
   name: 'EmailAddress';
 }
 
-export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
+export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   appVersion?: Resolver<ResolversTypes['AppVersion'], ParentType, ContextType>;
   signedInUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
 };
 
-export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
+export type UserResolvers<ContextType = Context, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
   displayName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   email?: Resolver<ResolversTypes['EmailAddress'], ParentType, ContextType>;
   image?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type Resolvers<ContextType = any> = {
+export type Resolvers<ContextType = Context> = {
   AppVersion?: AppVersionResolvers<ContextType>;
   Date?: GraphQLScalarType;
   DateTime?: GraphQLScalarType;
@@ -180,7 +181,7 @@ export type Resolvers<ContextType = any> = {
   User?: UserResolvers<ContextType>;
 };
 
-export type DirectiveResolvers<ContextType = any> = {
+export type DirectiveResolvers<ContextType = Context> = {
   auth?: AuthDirectiveResolver<any, any, ContextType>;
   rateLimit?: RateLimitDirectiveResolver<any, any, ContextType>;
 };
