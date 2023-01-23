@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { Stack, Box } from '@mui/joy';
+import { Box, Sheet } from '@mui/joy';
 import { withTranslations } from '@/util/i18n/withTranslations';
 import { join } from 'path';
 import { existsSync, readFileSync } from 'fs';
@@ -12,9 +12,12 @@ export interface HomePageProps {
 
 const HomePage = (props: HomePageProps) => {
   return (
-    <Stack spacing={1}>
+    <Sheet
+      variant="soft"
+      sx={(theme) => ({ px: 2, py: 1, borderRadius: theme.spacing(1) })}
+    >
       <Box dangerouslySetInnerHTML={{ __html: props.contentHtml }} />
-    </Stack>
+    </Sheet>
   );
 };
 
