@@ -8,6 +8,7 @@ import { useApollo } from '@/graphql/apollo';
 import { ApolloProvider } from '@apollo/client';
 import AppPage from '@/components/AppPage';
 import { DefaultSeo } from 'next-seo';
+import { appFont } from '@/theme';
 
 const MyApp = ({
   Component,
@@ -22,6 +23,11 @@ const MyApp = ({
 
   return (
     <>
+      <style jsx global>{`
+        * {
+          font-family: ${appFont.style.fontFamily}, sans-serif !important;
+        }
+      `}</style>
       <DefaultSeo title={t(`seoTitle`)} description={t(`seoDescription`)} />
       <ApolloProvider client={apollo}>
         <SessionProvider session={session}>
