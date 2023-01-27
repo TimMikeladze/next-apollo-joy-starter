@@ -32,7 +32,7 @@ type AppVersion {
 }
 
 type User {
-  email: EmailAddress!
+  email: EmailAddress
   image: String
   displayName: String
 }

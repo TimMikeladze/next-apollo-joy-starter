@@ -887,7 +887,7 @@ export type ModelTypes = {
 	version: string
 };
 	["User"]: {
-		email: ModelTypes["EmailAddress"],
+		email?: ModelTypes["EmailAddress"] | undefined,
 	image?: string | undefined,
 	displayName?: string | undefined
 };
@@ -908,7 +908,7 @@ export type GraphQLTypes = {
 };
 	["User"]: {
 	__typename: "User",
-	email: GraphQLTypes["EmailAddress"],
+	email?: GraphQLTypes["EmailAddress"] | undefined,
 	image?: string | undefined,
 	displayName?: string | undefined
 };
