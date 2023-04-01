@@ -114,7 +114,7 @@
     "@typescript-eslint/parser": "5.54.1",
     "babel-loader": "^9.1.2",
     "commit-it": "0.0.11",
-    "concurrently": "7.6.0",
+    "concurrently": "8.0.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "8.7.0",
