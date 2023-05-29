@@ -90,7 +90,7 @@
     "@babel/core": "^7.20.12",
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
-    "@dword-design/eslint-plugin-import-alias": "3.0.1",
+    "@dword-design/eslint-plugin-import-alias": "4.0.5",
     "@graphql-codegen/cli": "3.2.2",
     "@graphql-codegen/typescript": "3.0.2",
     "@graphql-codegen/typescript-resolvers": "3.1.1",
